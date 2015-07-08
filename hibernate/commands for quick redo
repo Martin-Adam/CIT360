@@ -3,3 +3,10 @@ INSERT INTO `pokestarters`(`pokemon_id`, `pokemon_name`, `type`) VALUES (1,'Pika
 INSERT INTO `poke_number`(`poke_num_id`, `pokestarters_id`, `trainer_id`) VALUES (1,1,1);
 INSERT INTO `trainer`(`trainer_id`, `trainer_name`, `pokemon_id`) VALUES (1,'Ash',1);
 UPDATE `pokestart`.`pokestarters` SET `pokemon_name` = 'Charmander' WHERE `pokestarters`.`pokemon_id` = 2;
+
+TRUNCATE TABLE `pokestarters`;
+TRUNCATE TABLE `poke_number`;
+TRUNCATE TABLE `trainer`;
+INSERT INTO `pokestarters`(`pokemon_name`, `type`) VALUES ('Pikachu','Electric'), ('Charmander', 'Fire'), ('Bulbasaur', 'Grass/Posion'), ('Squirtle', 'Water');
+INSERT INTO `poke_number`(`pokestarters_id`, `trainer_id`) VALUES (1,1);
+INSERT INTO `trainer`(`trainer_name`, `pokemon_id`) VALUES ('Ash',1);
